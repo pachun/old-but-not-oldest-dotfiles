@@ -1,0 +1,6 @@
+rcup \
+  -x symlink_dotfiles \
+  -x Brewfile \
+  -x Brewfile.lock.json \
+  -x install.sh \
+  -d .
