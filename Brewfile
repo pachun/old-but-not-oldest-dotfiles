@@ -5,6 +5,7 @@ brew "tmux"
 brew "the_silver_searcher" # ag
 brew "wget"
 brew "hub"
+brew "lab"
 brew "yarn"
 brew "zsh-syntax-highlighting"
 brew "asdf"
