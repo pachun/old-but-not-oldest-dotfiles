@@ -12,3 +12,6 @@ brew "asdf"
 brew "diff-so-fancy"
 brew "elixir"
 brew "watchman" # react-native start
+
+tap heroku/brew
+brew "heroku"
