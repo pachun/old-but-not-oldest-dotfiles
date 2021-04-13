@@ -102,11 +102,6 @@ function alias_rails_commands {
   alias ss="DISABLE_SPRING=true COVERAGE=true bundle exec rspec"
 }
 
-function setup_asdf_version_manager {
-  # https://asdf-vm.com/#/core-manage-asdf-vm
-  . $(brew --prefix asdf)/asdf.sh
-}
-
 function use_neovim {
   alias vim="nvim"
 }
@@ -118,13 +113,9 @@ use_custom_prompt
 alias_git_commands
 autocomplete_git_commands
 alias_rails_commands
-setup_asdf_version_manager
 use_neovim
 
 alias e="exit"
 alias c="clear"
 alias t="tmux"
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-export ASDF_DIR=/usr/local/opt/asdf
-. /usr/local/opt/asdf/asdf.sh

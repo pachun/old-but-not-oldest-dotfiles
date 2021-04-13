@@ -35,6 +35,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # install vim plugins
 vim +'PlugInstall --sync' +qa
 
+# FINISH INSTALLING ASDF THRU HOMEBREW
+echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+
 # INSTALL RUBY
 asdf plugin add ruby
 asdf install ruby latest

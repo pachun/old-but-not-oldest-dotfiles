@@ -15,3 +15,9 @@ brew "watchman" # react-native start
 
 tap heroku/brew
 brew "heroku"
+
+# asdf
+brew "coreutils"
+brew "curl"
+brew "git"
+brew "asdf"
