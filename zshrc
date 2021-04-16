@@ -73,15 +73,15 @@ function use_custom_prompt {
 
 function alias_git_commands {
   alias g="hub"
-  alias gs="g status"
-  alias pr="g pull-request"
+  alias gs="git status"
+  alias pr="git pull-request"
   alias mr="lab mr create origin develop"
-  alias gco="g checkout"
-  alias gb="g branch"
-  alias gr="g rebase"
-  alias gri="g rebase -i"
-  alias gl="g log"
-  alias gm="g merge"
+  alias gco="git checkout"
+  alias gb="git branch"
+  alias gr="git rebase"
+  alias gri="git rebase -i"
+  alias gl="git log"
+  alias gm="git merge"
 
   alias x="gitx"
   alias wip="g add .; g commit -am 'wip' --no-verify"
