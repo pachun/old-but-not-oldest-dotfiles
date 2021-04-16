@@ -1,7 +1,7 @@
 function UseFullColorRange()
   function UseFullColorRangeInTmux()
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   endfunction
 
   set termguicolors
@@ -74,10 +74,20 @@ function InstallThirdPartyPlugins()
   Plug 'tpope/vim-rails'
 
   " javascript syntax highlighting
-  Plug 'pangloss/vim-javascript'
-  Plug 'isRuslan/vim-es6'
-  Plug 'leafgarland/typescript-vim'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'isRuslan/vim-es6'
+  " Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+
+  Plug 'sheerun/vim-polyglot'
+  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'morhetz/gruvbox'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'mxw/vim-jsx'
+  " Plug 'leafgarland/typescript-vim'
+
+  " Plug 'yuezk/vim-js'
+  " Plug 'maxmellon/vim-jsx-pretty'
 
   Plug 'elmcast/elm-vim'
   Plug 'elixir-editors/vim-elixir'
@@ -95,13 +105,6 @@ function InstallThirdPartyPlugins()
 
   function ConfigureNeoformat()
     autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-  endfunction
-
-  function ConfigureTypescriptVimToHighlightTsxFiles()
-    augroup SyntaxSettings
-      autocmd!
-      autocmd BufNewFile,BufRead *.tsx set filetype=typescript
-    augroup END
   endfunction
 
   function ConfigureVimMixFormat()
@@ -124,7 +127,6 @@ function InstallThirdPartyPlugins()
 
   call ConfigureVimTest()
   call ConfigureNeoformat()
-  call ConfigureTypescriptVimToHighlightTsxFiles()
   call ConfigureVimMixFormat()
   call ConfigurePrettier()
 endfunction
@@ -161,3 +163,5 @@ let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
 map <leader>tv <Plug>SetTmuxVars
 nnoremap <leader>r :call Send_to_Tmux("./" . @% . "\n")<CR>
+
+let g:solarized_extra_hi_groups = 1
