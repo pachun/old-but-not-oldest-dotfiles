@@ -118,4 +118,6 @@ use_neovim
 alias e="exit"
 alias c="clear"
 alias t="tmux"
+alias lanip="ifconfig | grep 192 | cut -d ' ' -f 2"
+
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
