@@ -75,7 +75,7 @@ function alias_git_commands {
   alias g="hub"
   alias gs="git status"
   alias pr="git pull-request"
-  alias mr="lab mr create origin develop"
+  alias mr="lab mr create origin day2develop"
   alias gco="git checkout"
   alias gb="git branch"
   alias gr="git rebase"
@@ -88,6 +88,7 @@ function alias_git_commands {
   alias keepmaster="git branch | grep -v \"master\" | xargs git branch -D"
   alias keepmain="git branch | grep -v \"main\" | xargs git branch -D"
   alias keepdevelop="git branch | grep -v \"develop\" | xargs git branch -D"
+  alias keepday2develop="git branch | grep -v \"day2develop\" | xargs git branch -D"
 }
 
 function autocomplete_git_commands {
@@ -118,6 +119,12 @@ use_neovim
 alias e="exit"
 alias c="clear"
 alias t="tmux"
-alias lanip="ifconfig | grep 192 | cut -d ' ' -f 2"
+alias lanip="ipconfig getifaddr en0"
+alias credentials="EDITOR='nvim' rails credentials:edit"
 
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/nick/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+. /opt/homebrew/opt/asdf/asdf.sh
