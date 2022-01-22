@@ -59,6 +59,7 @@ endfunction
 function InstallThirdPartyPlugins()
   call plug#begin('~/.vim/plugged')
   Plug 'lifepillar/vim-solarized8'
+  Plug 'cormacrelf/vim-colors-github'
   Plug 'christoomey/vim-tmux-navigator'
   " Plug 'christoomey/vim-tmux-runner'
   Plug 'jgdavey/tslime.vim'
@@ -135,8 +136,8 @@ function InstallThirdPartyPlugins()
 endfunction
 
 function UseSolarizedDarkColorScheme()
-  set background=dark
-  colorscheme solarized8
+  set background=light
+  colorscheme github
 endfunction
 
 function AllowCapitalizedSaveAndQuitCommands()
